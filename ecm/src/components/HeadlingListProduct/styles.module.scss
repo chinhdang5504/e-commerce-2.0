@@ -1,0 +1,12 @@
+@use '@/assets/styles/variable.module' as var;
+@use '@/assets/styles/_mixin.module.scss' as mixin;
+
+.container {
+  @include mixin.flex_box_custom(space-between, center, 0px);
+  margin-top: 40px;
+}
+
+.container_item {
+  @include mixin.flex_box_custom(space-between, center);
+
+}

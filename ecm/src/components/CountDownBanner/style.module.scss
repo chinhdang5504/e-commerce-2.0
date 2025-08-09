@@ -1,0 +1,25 @@
+@use '@/assets/styles/variable.module' as var;
+@use '@/assets/styles/_mixin.module.scss' as mixin;
+
+
+.container {
+  background-image: url(@/assets/images/Boy-hoodie-white.png);
+  height: 409px;
+  width: calc(100%/2);
+  background-repeat:  no-repeat;
+  background-size: cover;
+}
+
+.container_timer {
+  @include mixin.flex_box_custom(center, center)
+}
+
+.content {
+  font-size: 28px;
+  color: var.$four_color;
+  text-align: center;
+}
+
+.box_btn {
+  text-align: center;
+}

@@ -1,0 +1,77 @@
+@use '@/assets/styles/variable.module' as var;
+@use '@/assets/styles/_mixin.module.scss' as mixin;
+
+.container {
+  @include mixin.flex_box_custom(center, center, 0px);
+  left: 0;
+  right: 0;
+}
+
+.topHeader {
+  position: absolute;
+  top: 0;
+}
+
+.fixedHeader {
+  position: fixed;
+  top: -83px;
+  background-color: #ffffffe6;
+  box-shadow: 2px 0px 12px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+
+  transform: translateY(83px);
+  transition: transform 0.7s ease;
+}
+
+.container_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 83px;
+  width: 1250px;
+}
+
+.container_box_item {
+  @include mixin.flex_box_custom(center, center)
+}
+
+.container_box_box {
+  @include mixin.flex_box_custom(center, center, 20px)
+}
+
+.container_box_menu {
+  @include mixin.flex_box_custom(center, center, 40px)
+}
+
+.box_icon {
+  @include mixin.flex_box_custom(center, center, 0px);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var.$primary_color;
+}
+
+.menu {
+  padding-top: 8px;
+  color: var.$primary_color;
+}
+
+.menu::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var.$primary_color;
+  margin-top: 6px;
+
+  transform: scale(0);
+  transition: transform 0.3s, opacity 0.5s ;
+  opacity: 0;
+  transform-origin: right;
+}
+
+.menu:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}

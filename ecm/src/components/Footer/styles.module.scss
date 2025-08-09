@@ -1,0 +1,37 @@
+@use '@/assets/styles/variable.module' as var;
+@use '@/assets/styles/_mixin.module.scss' as mixin;
+
+.background {
+  background-color: #363636;
+  padding: 40px 0px;
+  color: white
+}
+
+.container {
+  @include mixin.flex_box_custom(center, center);
+  flex-direction: column;
+  padding: 15px;
+}
+
+.boxItem {
+  @include mixin.flex_box_custom(center, center);
+  margin-bottom: 30px;
+  gap: 48px;
+
+  div {
+    font-size: 14px;
+  }
+}
+
+.logoStyle {
+  margin-bottom: 32px;
+  img { 
+    width: 160px;
+    height: auto;
+  }
+}
+
+
+.copyRight {
+  margin-top: 36px;
+}

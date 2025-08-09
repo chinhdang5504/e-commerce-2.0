@@ -1,0 +1,37 @@
+@use '@/assets/styles/variable.module' as var;
+@use '@/assets/styles/_mixin.module.scss' as mixin;
+
+
+
+.container {
+  margin-top: 100px;
+  @include mixin.flex_box_custom(space-between, center);
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 300;
+  color: var.$four_color;
+  text-align: center;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 200;
+  color: var.$thr_color;
+  text-align: center;
+  width: 460px;
+  line-height: 20px;
+}
+
+.btnBox {
+  @include mixin.flex_box_custom(center, center);
+  margin-top: 50px;
+
+}
+
+.boxImg {
+  width: 100%;
+  @include mixin.flex_box_custom(center, center);
+}

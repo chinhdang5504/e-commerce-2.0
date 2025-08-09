@@ -1,0 +1,30 @@
+@use '@/assets/styles/_mixin.module.scss' as mixin;
+@use '@/assets/styles/variable.module.scss' as var;
+
+.container {
+  @include  mixin.flex_box_custom(center, center, 0px);
+
+  background-image: url(../../assets/images/Banner.jpeg);
+  min-height: 750px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+
+.content {
+  @include  mixin.flex_box_custom(center, center, 20px);
+  flex-direction: column;
+}
+
+.title {
+  font-size: 42px;
+  color: var.$four_color;
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.description {
+  color: var.$thr_color;
+  font-weight: 400;
+  margin-bottom: 24px;
+}

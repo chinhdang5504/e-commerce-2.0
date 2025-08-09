@@ -1,0 +1,57 @@
+@use '@/assets/styles/variable.module' as var;
+@use '@/assets/styles/_mixin.module.scss' as mixin;
+
+.container {
+  @include mixin.flex_box_custom(center, center, 0px);
+  margin: 65px 0px 15px;
+}
+
+.wrapper {
+  @include mixin.flex_box_custom(center, center, 0px);
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+
+}
+
+.wrapper_content {
+  width: 100%;
+  @include mixin.flex_box_custom(center, center, 0px);
+}
+
+.title {
+  font-size: 14px;
+  color: var.$primary_color;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 25px;
+  color: var.$thr_color;
+  font-weight: 400;
+  @include mixin.flex_box_custom(center, center, 0px);
+  width: 100%;
+
+
+}
+
+.description::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  flex: 1;
+  margin: 0 60px 0 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom:1px solid #e1e1e1;
+}
+
+.description::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  flex: 1;
+  margin: 0 0 0 60px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom:1px solid #e1e1e1;
+}
